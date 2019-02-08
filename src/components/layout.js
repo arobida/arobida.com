@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql, Link } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby'
 import { css } from '@emotion/core'
-import { FaGithub, FaTwitter } from 'react-icons/fa'
 
 import './layout.css'
 
