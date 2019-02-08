@@ -47,7 +47,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <img src={left} alt="left triangle" css={leftAngle} />
-        <Header siteTitle={data.site.siteMetadata.title} />
+        <Header />
         <div
           style={{
             margin: `0 auto`,
