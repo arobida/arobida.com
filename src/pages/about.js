@@ -7,17 +7,13 @@ import Profile from '../components/profile'
 
 const pic = css`
   width: 200px;
-  border-radius: 50px;
-`
-const proimg = css`
-  border-radius: 50px;
 `
 const About = ({ props }) => (
   <Layout>
     <SEO title="About" />
     <h1>Hi I'm Andrew & I am a addicted to development</h1>
     <div css={pic}>
-      <Profile css={proimg} />
+      <Profile />
     </div>
   </Layout>
 )

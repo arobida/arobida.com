@@ -81,6 +81,8 @@ const free = css`
 `
 const links = css`
   margin-left: 30px;
+  font-weight: 900;
+  font-size: 1.4em;
   color: #663399;
   :hover {
     color: #ffb237;
@@ -94,13 +96,34 @@ const Header = ({ siteTitle }) => (
         <Icon />
       </Link>
       <div css={navlinks} className="navlinks">
-        <Link to="/about/" css={links}>
+        <Link
+          to="/about/"
+          css={links}
+          activeStyle={{
+            color: '#ffb237',
+            textDecoration: 'underline',
+          }}
+        >
           About
         </Link>
-        <Link to="/projects/" css={links}>
+        <Link
+          to="/projects/"
+          css={links}
+          activeStyle={{
+            color: '#ffb237',
+            textDecoration: 'underline',
+          }}
+        >
           Projects
         </Link>
-        <Link to="/contact/" css={links}>
+        <Link
+          to="/contact/"
+          css={links}
+          activeStyle={{
+            color: '#ffb237',
+            textDecoration: 'underline',
+          }}
+        >
           Contact
         </Link>
       </div>
