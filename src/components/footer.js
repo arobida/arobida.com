@@ -60,16 +60,14 @@ const Footer = () => (
       </div>
       <div className="social" css={social}>
         <a
-          className="column"
           href="https://github.com/arobida"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ display: 'inline' }}
+          style={{ display: 'inline-block',marginRight:'15px' }}
         >
           <FaGithub size="1em" color="#FFB237" />
         </a>
         <a
-          className="column"
           href="https://twitter.com/theafr86"
           target="_blank"
           rel="noopener noreferrer"

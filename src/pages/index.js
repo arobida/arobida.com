@@ -42,12 +42,12 @@ const IndexPage = () => (
       ]}
     />
     <Header />
-    <h1 className="title" css={center}>
+    <h1 css={center}>
       <Typing speed={80}>
         <span>Modern Web Developer</span>
       </Typing>
     </h1>
-    <h2 className="subtitle" css={center}>
+    <h2 css={center}>
       <Typing speed={80}>
         <Typing.Delay ms={2600} />
         <span>With: </span>

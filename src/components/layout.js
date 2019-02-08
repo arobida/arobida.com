@@ -4,7 +4,6 @@ import { StaticQuery, graphql, Link } from 'gatsby'
 import { css } from '@emotion/core'
 import { FaGithub, FaTwitter } from 'react-icons/fa'
 
-import 'bulma/css/bulma.min.css'
 import './layout.css'
 
 import Header from './header'
