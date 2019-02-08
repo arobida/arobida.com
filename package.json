@@ -8,7 +8,6 @@
     "@emotion/core": "^10.0.6",
     "@emotion/styled": "^10.0.6",
     "@typeform/embed": "^0.6.1",
-    "bulma": "^0.7.2",
     "gatsby": "^2.0.105",
     "gatsby-image": "^2.0.20",
     "gatsby-plugin-emotion": "^4.0.1",
