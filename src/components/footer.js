@@ -9,10 +9,13 @@ const footer = css`
   bottom: 0;
   width: 100vw;
   mix-blend-mode: darken;
+  @media (max-width: 450px) {
+    display: none;
+  }
 `
 const footerbox = css`
   background-color: #663399;
-  color:white;
+  color: white;
   margin: 0;
   padding: 10px;
   display: grid;
@@ -63,7 +66,7 @@ const Footer = () => (
           href="https://github.com/arobida"
           target="_blank"
           rel="noopener noreferrer"
-          style={{ display: 'inline-block',marginRight:'15px' }}
+          style={{ display: 'inline-block', marginRight: '15px' }}
         >
           <FaGithub size="1em" color="#FFB237" />
         </a>
