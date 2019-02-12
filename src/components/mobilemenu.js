@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { css } from '@emotion/core'
-import { slide as Menu } from 'react-burger-menu'
+import { stack as Menu } from 'react-burger-menu'
 
 const mobile = css`
+  display: overlay;
+  z-index: 100;
   @media (min-width: 450px) {
     display: none;
   }
@@ -12,6 +14,7 @@ const list = css`
   list-style: none;
 `
 const link = css`
+  margin-bottom: 30px;
   padding: 10px;
   font-weight: 200;
   font-size: 1.4em;
@@ -19,14 +22,15 @@ const link = css`
 `
 
 export default class MobileMenu extends React.Component {
-  showSettings(event) {
-    event.preventDefault()
-  }
+  // used for more complex animations that need to wrap the entire page
+  //   showSettings(event) {
+  //     event.preventDefault()
+  //   }
 
   render() {
     return (
       <div css={mobile}>
-        <Menu styles={styles}>
+        <Menu styles={styles} right>
           <ul css={list}>
             <li>
               <Link
@@ -79,28 +83,28 @@ const styles = {
     position: 'fixed',
     width: '36px',
     height: '30px',
-    bottom: '36px',
-    right: '36px',
+    bottom: '20px',
+    right: '25px',
   },
   bmBurgerBars: {
-    background: '#373a47',
+    background: '#ffb237',
   },
   bmBurgerBarsHover: {
-    background: '#a90000',
+    background: '#ffb237',
   },
   bmCrossButton: {
-    height: '24px',
-    width: '24px',
+    height: '35px',
+    width: '35px',
   },
   bmCross: {
-    background: '#bdc3c7',
+    background: '#ffb237',
   },
   bmMenuWrap: {
     position: 'fixed',
     height: '100%',
   },
   bmMenu: {
-    background: '#373a47',
+    background: 'rgba(0, 0, 0, 0.3)',
     padding: '2.5em 1.5em 0',
     fontSize: '1.15em',
   },
