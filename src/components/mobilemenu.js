@@ -5,6 +5,7 @@ import { stack as Menu } from 'react-burger-menu'
 import './mobilemenu.css'
 
 const mobile = css`
+  z-index: 100;
   @media (min-width: 450px) {
     display: none;
   }
@@ -29,7 +30,7 @@ export default class MobileMenu extends React.Component {
   render() {
     return (
       <div css={mobile}>
-        <Menu right>
+        <Menu right pageWrapId={'page-wrap'}>
           <ul css={list}>
             <li>
               <Link
@@ -55,6 +56,19 @@ export default class MobileMenu extends React.Component {
                 }}
               >
                 About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/projects/"
+                css={link}
+                className="menu-item"
+                activeStyle={{
+                  color: '#ffb237',
+                  textDecoration: 'underline',
+                }}
+              >
+                Projects
               </Link>
             </li>
             <li>

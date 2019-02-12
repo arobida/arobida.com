@@ -32,7 +32,7 @@ const center = css`
   @media (max-width: 450px) {
     width: 100%;
     font-size: 1.5em;
-    color:#FFB237;
+    color: #663399;
   }
 `
 const text = css`
@@ -66,7 +66,7 @@ const IndexPage = () => (
         <h2 css={center}>
           <Typing speed={80}>
             <Typing.Delay ms={2600} />
-            <span>With: </span>
+            <span style={{color:'white'}}>With: </span>
             <span>
               react{' '}
               <span role="img" aria-label="emoji rock-on">

@@ -56,7 +56,9 @@ const Layout = ({ children }) => (
       <>
         <img src={left} alt="left triangle" css={leftAngle} />
         <Header />
-        <div css={container}>{children}</div>
+        <div css={container} id="page-wrap">
+          {children}
+        </div>
         <Footer />
         <MobileMenu />
         <img src={right} alt="right triangle" css={rightAngle} />
