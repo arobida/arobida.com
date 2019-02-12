@@ -2,10 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { css } from '@emotion/core'
 import { stack as Menu } from 'react-burger-menu'
+import './mobilemenu.css'
 
 const mobile = css`
-  display: overlay;
-  z-index: 100;
   @media (min-width: 450px) {
     display: none;
   }
@@ -30,7 +29,7 @@ export default class MobileMenu extends React.Component {
   render() {
     return (
       <div css={mobile}>
-        <Menu styles={styles} right>
+        <Menu right>
           <ul css={list}>
             <li>
               <Link
@@ -76,49 +75,4 @@ export default class MobileMenu extends React.Component {
       </div>
     )
   }
-}
-
-const styles = {
-  bmBurgerButton: {
-    position: 'fixed',
-    width: '36px',
-    height: '30px',
-    bottom: '20px',
-    right: '25px',
-  },
-  bmBurgerBars: {
-    background: '#ffb237',
-  },
-  bmBurgerBarsHover: {
-    background: '#ffb237',
-  },
-  bmCrossButton: {
-    height: '35px',
-    width: '35px',
-  },
-  bmCross: {
-    background: '#ffb237',
-  },
-  bmMenuWrap: {
-    position: 'fixed',
-    height: '100%',
-  },
-  bmMenu: {
-    background: 'rgba(0, 0, 0, 0.3)',
-    padding: '2.5em 1.5em 0',
-    fontSize: '1.15em',
-  },
-  bmMorphShape: {
-    fill: '#373a47',
-  },
-  bmItemList: {
-    color: '#b8b7ad',
-    padding: '0.8em',
-  },
-  bmItem: {
-    display: 'inline-block',
-  },
-  bmOverlay: {
-    background: 'rgba(0, 0, 0, 0.3)',
-  },
 }

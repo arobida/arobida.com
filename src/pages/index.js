@@ -32,6 +32,7 @@ const center = css`
   @media (max-width: 450px) {
     width: 100%;
     font-size: 1.5em;
+    color:#FFB237;
   }
 `
 const text = css`
