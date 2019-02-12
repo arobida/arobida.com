@@ -34,9 +34,10 @@ const rightAngle = css`
 `
 const container = css`
   margin: 0 auto;
-  max-width:960px;
-  padding: 0px 1.0875rem 1.45rem;
+  max-width: 960px;
+  padding: 0px 1.0875rem 3.45rem;
   padding-top: 0;
+  font-size: 1.5em;
 `
 
 const Layout = ({ children }) => (

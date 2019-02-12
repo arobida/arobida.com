@@ -53,6 +53,9 @@ const nav = css`
     position: fixed;
     transform: translateY(0%);
   }
+  @media (max-width:450px){
+    display:none;
+  }
 `
 const navbox = css`
   margin: 0 auto;

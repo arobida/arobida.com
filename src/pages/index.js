@@ -20,16 +20,28 @@ const bg = css`
     #00e676,
     #ffffff
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 40vh;
+  height: 50vh;
 `
 const center = css`
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+  font-size: 2.5em;
+  @media (max-width: 450px) {
+    width: 100%;
+    font-size: 1.5em;
+  }
 `
+const text = css`
+margin:0 auto;
+@media(max-width:450px){
+padding-top:40%;
+}
+`
+
 const IndexPage = () => (
-  <div className="bg" css={bg}>
+  <>
     <SEO
       title="Welcome"
       keywords={[
@@ -40,47 +52,52 @@ const IndexPage = () => (
         `javascript`,
       ]}
     />
-    <Header />
-    <h1 css={center}>
-      <Typing speed={80}>
-        <span>Modern Web Developer</span>
-      </Typing>
-    </h1>
-    <h2 css={center}>
-      <Typing speed={80}>
-        <Typing.Delay ms={2600} />
-        <span>With: </span>
-        <span>
-          react{' '}
-          <span role="img" aria-label="emoji rock-on">
-            🤘
+
+    <div className="bg" css={bg}>
+      <Header />
+      <div css={text}>
+      <h1 css={center}>
+        <Typing speed={80}>
+          <span>Modern Web Developer</span>
+        </Typing>
+      </h1>
+      <h2 css={center}>
+        <Typing speed={80}>
+          <Typing.Delay ms={2600} />
+          <span>With: </span>
+          <span>
+            react{' '}
+            <span role="img" aria-label="emoji rock-on">
+              🤘
+            </span>
           </span>
-        </span>
-        <Typing.Backspace count={8} delay={500} />
-        <span>
-          node{' '}
-          <span role="img" aria-label="emoji nerdy face">
-            🤓
+          <Typing.Backspace count={8} delay={500} />
+          <span>
+            node{' '}
+            <span role="img" aria-label="emoji nerdy face">
+              🤓
+            </span>
           </span>
-        </span>
-        <Typing.Backspace count={7} delay={500} />
-        <span>
-          gatsby{' '}
-          <span role="img" aria-label="emoji rocket">
-            🚀
+          <Typing.Backspace count={7} delay={500} />
+          <span>
+            gatsby{' '}
+            <span role="img" aria-label="emoji rocket">
+              🚀
+            </span>
           </span>
-        </span>
-        <Typing.Backspace count={9} delay={500} />
-        <span>
-          & much more!{' '}
-          <span role="img" aria-label="emoji thumbs up">
-            👍
+          <Typing.Backspace count={9} delay={500} />
+          <span>
+            & much more!{' '}
+            <span role="img" aria-label="emoji thumbs up">
+              👍
+            </span>
           </span>
-        </span>
-      </Typing>
-    </h2>
+        </Typing>
+      </h2>
+      </div>
+    </div>
     <Footer />
-  </div>
+  </>
 )
 
 export default IndexPage

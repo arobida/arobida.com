@@ -1,19 +1,13 @@
-import React from 'react'
+import {React, useState} from 'react'
 import { css } from '@emotion/core'
 import { FaEnvelope } from 'react-icons/fa'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-export default class Contact extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state={
-      hey:'working'
-    }
-  }
+const  Contact =() => {
+  const {count, setCount}= useState(0)
 
-  render() {
     return (
       <Layout>
         <SEO title="Contact" />
@@ -26,5 +20,6 @@ export default class Contact extends React.Component {
         </div>
       </Layout>
     )
-  }
 }
+
+export default Contact
