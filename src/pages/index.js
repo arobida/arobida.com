@@ -4,6 +4,7 @@ import Typing from 'react-typing-animation'
 
 import SEO from '../components/seo'
 import Header from '../components/header'
+import MobileMenu from '../components/mobilemenu'
 import Footer from '../components/footer'
 
 const bg = css`
@@ -34,10 +35,10 @@ const center = css`
   }
 `
 const text = css`
-margin:0 auto;
-@media(max-width:450px){
-padding-top:40%;
-}
+  margin: 0 auto;
+  @media (max-width: 450px) {
+    padding-top: 40%;
+  }
 `
 
 const IndexPage = () => (
@@ -56,46 +57,47 @@ const IndexPage = () => (
     <div className="bg" css={bg}>
       <Header />
       <div css={text}>
-      <h1 css={center}>
-        <Typing speed={80}>
-          <span>Modern Web Developer</span>
-        </Typing>
-      </h1>
-      <h2 css={center}>
-        <Typing speed={80}>
-          <Typing.Delay ms={2600} />
-          <span>With: </span>
-          <span>
-            react{' '}
-            <span role="img" aria-label="emoji rock-on">
-              🤘
+        <h1 css={center}>
+          <Typing speed={80}>
+            <span>Modern Web Developer</span>
+          </Typing>
+        </h1>
+        <h2 css={center}>
+          <Typing speed={80}>
+            <Typing.Delay ms={2600} />
+            <span>With: </span>
+            <span>
+              react{' '}
+              <span role="img" aria-label="emoji rock-on">
+                🤘
+              </span>
             </span>
-          </span>
-          <Typing.Backspace count={8} delay={500} />
-          <span>
-            node{' '}
-            <span role="img" aria-label="emoji nerdy face">
-              🤓
+            <Typing.Backspace count={8} delay={500} />
+            <span>
+              node{' '}
+              <span role="img" aria-label="emoji nerdy face">
+                🤓
+              </span>
             </span>
-          </span>
-          <Typing.Backspace count={7} delay={500} />
-          <span>
-            gatsby{' '}
-            <span role="img" aria-label="emoji rocket">
-              🚀
+            <Typing.Backspace count={7} delay={500} />
+            <span>
+              gatsby{' '}
+              <span role="img" aria-label="emoji rocket">
+                🚀
+              </span>
             </span>
-          </span>
-          <Typing.Backspace count={9} delay={500} />
-          <span>
-            & much more!{' '}
-            <span role="img" aria-label="emoji thumbs up">
-              👍
+            <Typing.Backspace count={9} delay={500} />
+            <span>
+              & much more!{' '}
+              <span role="img" aria-label="emoji thumbs up">
+                👍
+              </span>
             </span>
-          </span>
-        </Typing>
-      </h2>
+          </Typing>
+        </h2>
       </div>
     </div>
+    <MobileMenu />
     <Footer />
   </>
 )
