@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { css } from '@emotion/core'
 import { slide as Menu } from 'react-burger-menu'
 
@@ -6,6 +7,15 @@ const mobile = css`
   @media (min-width: 450px) {
     display: none;
   }
+`
+const list = css`
+  list-style: none;
+`
+const link = css`
+  padding: 10px;
+  font-weight: 200;
+  font-size: 1.4em;
+  color: #663399;
 `
 
 export default class MobileMenu extends React.Component {
@@ -17,18 +27,47 @@ export default class MobileMenu extends React.Component {
     return (
       <div css={mobile}>
         <Menu styles={styles}>
-          <a id="home" className="menu-item" href="/">
-            Home
-          </a>
-          <a id="about" className="menu-item" href="/about">
-            About
-          </a>
-          <a id="contact" className="menu-item" href="/contact">
-            Contact
-          </a>
-          <a onClick={this.showSettings} className="menu-item--small" href="">
-            Settings
-          </a>
+          <ul css={list}>
+            <li>
+              <Link
+                to="/"
+                css={link}
+                className="menu-item"
+                activeStyle={{
+                  color: '#ffb237',
+                  textDecoration: 'underline',
+                }}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about/"
+                css={link}
+                className="menu-item"
+                activeStyle={{
+                  color: '#ffb237',
+                  textDecoration: 'underline',
+                }}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact/"
+                css={link}
+                className="menu-item"
+                activeStyle={{
+                  color: '#ffb237',
+                  textDecoration: 'underline',
+                }}
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
         </Menu>
       </div>
     )

@@ -6,6 +6,7 @@ import { css } from '@emotion/core'
 import './layout.css'
 
 import Header from './header'
+import MobileMenu from './mobilemenu'
 import Footer from './footer'
 import left from '../images/left-angle.svg'
 import right from '../images/right-angle.svg'
@@ -57,6 +58,7 @@ const Layout = ({ children }) => (
         <Header />
         <div css={container}>{children}</div>
         <Footer />
+        <MobileMenu />
         <img src={right} alt="right triangle" css={rightAngle} />
       </>
     )}
