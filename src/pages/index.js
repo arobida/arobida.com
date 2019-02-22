@@ -27,12 +27,11 @@ const center = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: #663399;
   font-size: 2.5em;
   @media (max-width: 450px) {
     width: 100%;
     font-size: 1.5em;
-    color: #663399;
   }
 `
 const text = css`

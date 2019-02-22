@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from 'gatsby'
 import { css } from '@emotion/core'
 
 import './layout.css'
-
 import Header from './header'
 import MobileMenu from './mobilemenu'
 import Footer from './footer'
@@ -38,7 +37,7 @@ const container = css`
   max-width: 960px;
   padding: 0px 1.0875rem 3.45rem;
   padding-top: 0;
-  font-size: 1.5em;
+  font-size: 1.2em;
 `
 
 const Layout = ({ children }) => (
