@@ -7,8 +7,15 @@ import SEO from '../components/seo'
 import Profile from '../components/profile'
 import Ext_link from '../components/ext_link'
 
+const grid = css`
+  display:grid;
+  grid-template-columns:1fr 5fr;
+  grid-gap:2em;
+`
 const pic = css`
-  width: 200px;
+width:10em;
+margin:0 auto;
+border-radius:.4em;
 `
 const icon_link = css`
 display:inline-block;
@@ -18,8 +25,10 @@ const About = ({ props }) => (
   <Layout>
     <SEO title="About" />
     <h1>About Me</h1>
+    <div css={grid}>
     <div css={pic}>
-      <Profile />
+      <Profile style={{borderRadius:'10px'}}/>
+      </div>
       <div>
        <h2>Andrew Robida</h2>
       <p>Self-taught, inspired to learn</p>
