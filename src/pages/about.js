@@ -10,12 +10,14 @@ import Ext_link from '../components/ext_link'
 const grid = css`
   display:grid;
   grid-template-columns:1fr 5fr;
-  grid-gap:2em;
+  grid-gap:1em;
 `
 const pic = css`
 width:10em;
 margin:0 auto;
-border-radius:.4em;
+${'' /* @media(max-width:450px){
+  width:5em;
+} */}
 `
 const icon_link = css`
 display:inline-block;
