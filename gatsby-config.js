@@ -41,6 +41,20 @@ module.exports = {
       },
     },
     {
+        resolve: `gatsby-source-twitter`,
+        options: {
+            q: `theafr86`,
+            count:`5`,
+            result_type: `mixed`,
+            credentials: {
+                consumer_key: `${process.env.TWITTER_CKEY}`,
+                consumer_secret: `${process.env.TWITTER_CSECRET}`,
+                bearer_token: `${process.env.TWITTER_TOKEN}`
+            },
+            tweet_mode: 'extended'
+        }
+    },
+    {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,

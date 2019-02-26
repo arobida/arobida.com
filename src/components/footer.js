@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { css } from '@emotion/core'
-import { FaGithub, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa'
+
+import Ext_link from '../components/ext_link'
 
 const footer = css`
   z-index: 50;
@@ -36,6 +38,13 @@ const social = css`
 const free2 = css`
   grid-area: free2;
 `
+const ext_link = css`
+color:#FFB237;
+`
+const icon_link = css`
+display:inline-block;
+margin-right:15px;
+`
 
 const Footer = () => (
   <footer css={footer}>
@@ -49,35 +58,16 @@ const Footer = () => (
         </Link>
         © {new Date().getFullYear()}, Built with
         {` `}
-        <a
-          href="https://www.gatsbyjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: '#FFB237' }}
-        >
-          Gatsby
-        </a>{' '}
+        <Ext_link href="https://www.gatsbyjs.org" styles={ext_link}>Gastby</Ext_link>
+        {' '}
         <span role="img" aria-label="emoji heart">
           💜
         </span>
       </div>
       <div className="social" css={social}>
-        <a
-          href="https://github.com/arobida"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ display: 'inline-block', marginRight: '15px' }}
-        >
-          <FaGithub size="1em" color="#FFB237" />
-        </a>
-        <a
-          href="https://twitter.com/theafr86"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ display: 'inline' }}
-        >
-          <FaTwitter size="1em" color="#FFB237" />
-        </a>
+      <Ext_link href="https://github.com/arobida" styles={icon_link}><FaGithub size="1em" color="#FFB237" /></Ext_link>
+      <Ext_link href="https://twitter.com/theafr86" styles={icon_link}><FaTwitter size="1em" color="#FFB237" /></Ext_link>
+      <Ext_link href="https://www.linkedin.com/in/andrew-robida/" styles={icon_link}><FaLinkedin size="1em" color="#FFB237" /></Ext_link>
       </div>
       <div className="free2" css={free2} />
     </div>

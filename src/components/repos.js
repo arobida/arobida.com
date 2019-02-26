@@ -1,8 +1,15 @@
 import React from 'react'
 import { css } from '@emotion/core'
+import { FaGithub } from 'react-icons/fa'
+
+
+import Ext_link from '../components/ext_link'
 
 const project = css`
   margin-bottom: 40px;
+`
+const ext_link = css`
+margin-right:15px;
 `
 
 const Repos = ({ repositories }) => {
@@ -22,24 +29,11 @@ const Repos = ({ repositories }) => {
             </a>
           </span>
           <p>{repository.description}</p>
-          <a
-            href={repository.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ marginRight: '15px' }}
-          >
-            View Source
-          </a>
+           <Ext_link href={repository.url} styles={ext_link}><FaGithub/></Ext_link>
           {repository.homepageUrl === null ? (
             <span>No Preview</span>
           ) : (
-            <a
-              href={repository.homepageUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Preview
-            </a>
+            <Ext_link href={repository.homepageUrl} styles={ext_link}>Preview</Ext_link>
           )}
         </div>
       ))}

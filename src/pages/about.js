@@ -1,19 +1,38 @@
 import React from 'react'
 import { css } from '@emotion/core'
+import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Profile from '../components/profile'
+import Ext_link from '../components/ext_link'
 
 const pic = css`
   width: 200px;
 `
+const icon_link = css`
+display:inline-block;
+margin-right:15px;
+`
 const About = ({ props }) => (
   <Layout>
     <SEO title="About" />
-    <h1>Hi I'm Andrew & I am a addicted to development</h1>
+    <h1>About Me</h1>
     <div css={pic}>
       <Profile />
+      <div>
+       <h2>Andrew Robida</h2>
+      <p>Self-taught, inspired to learn</p>
+      <Ext_link href="https://github.com/arobida" styles={icon_link}><FaGithub size="1.5em" color="#FFB237" /></Ext_link>
+      <Ext_link href="https://twitter.com/theafr86" styles={icon_link}><FaTwitter size="1.5em" color="#FFB237" /></Ext_link>
+      <Ext_link href="https://www.linkedin.com/in/andrew-robida/" styles={icon_link}><FaLinkedin size="1.5em" color="#FFB237" /></Ext_link>
+      </div>
+    </div>
+    <div>
+      <h2>Hi Im Andrew & I am addicted to development</h2>
+      <p>
+      Ever since I was young I have loved figuring things out, how they work, how it was made, and can it be better. These things have constantly driven me to learn and improve all my life Im that annoying guy in your class that always ask why. Building things, solving problems, and process improvment is my cup of tea so if thats your cup too or you would like something special built give me a holler. Thanks for reading and I hope we will talk soon!
+      </p>
     </div>
   </Layout>
 )
