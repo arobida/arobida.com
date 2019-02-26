@@ -21,7 +21,7 @@ const bg = css`
     #00e676,
     #ffffff
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 50vh;
+  height: 80vh;
 `
 const center = css`
   display: flex;
@@ -36,8 +36,9 @@ const center = css`
 `
 const text = css`
   margin: 0 auto;
+  padding-top:8em;
   @media (max-width: 450px) {
-    padding-top: 40%;
+    padding-top: 20em;
   }
 `
 
@@ -46,9 +47,10 @@ const IndexPage = () => (
     <SEO
       title="Welcome"
       keywords={[
-        `arobida`,
         `Andrew Robida`,
+        `arobida`,
         `portfolio`,
+        `gatsbyjs`,
         `web developer`,
         `javascript`,
       ]}

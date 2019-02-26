@@ -9,7 +9,10 @@ import Repos from '../components/repos'
 const Projects = ({ data }) => (
   <Layout>
     <SEO title="Projects" />
-    <h1>Hi from the project page</h1>
+    <h1>Current Projects</h1>
+    <p>
+Here is a current list of projects that I am working on...
+    </p>
     <Repos repositories={data.github.viewer.repositories} />
   </Layout>
 )

@@ -13,10 +13,8 @@ console.log(data)
   return (
     <Layout>
       <SEO title="Contact" />
-      <h1>Hi from the contact page</h1>
-      <div className="column" style={{ cursor: 'pointer' }}>
+      <h1>Contact Me</h1>
         <FaEnvelope size="2em" />
-      </div>
       <div>
         <Tweets twits={data.allTweet.edges} />
       </div>

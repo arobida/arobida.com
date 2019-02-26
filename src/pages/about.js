@@ -15,9 +15,6 @@ const grid = css`
 const pic = css`
 width:10em;
 margin:0 auto;
-${'' /* @media(max-width:450px){
-  width:5em;
-} */}
 `
 const icon_link = css`
 display:inline-block;
