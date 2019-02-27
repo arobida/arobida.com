@@ -25,6 +25,7 @@ export default class SideNav extends React.Component {
     return (
       <SidebarJS
         sidebarjsName="MainSidebar"
+        sidebarjsConfig={{ position: 'right' }}
         onChangeVisibility={this.changeSidebarVisibility}
       >
         <MobileItems />
