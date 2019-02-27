@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { css } from '@emotion/core'
 import { FaEnvelope } from 'react-icons/fa'
-import { ReactTypeformEmbed } from 'react-typeform-embed'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -17,20 +16,20 @@ const button = css`
 export default class Contact extends React.Component {
   constructor(props) {
     super(props)
-    this.openForm = this.openForm.bind(this)
+    //this.openForm = this.openForm.bind(this)
   }
-  openForm() {
-    this.typeformEmbed.typeform.open()
-  }
+  // openForm() {
+  //   this.typeformEmbed.typeform.open()
+  // }
   render() {
     return (
       <Layout>
         <SEO title="Contact" />
         <h1>Contact Me</h1>
-        <button onClick={this.openForm} css={button}>
+        <button css={button}>
           <FaEnvelope size="2em" color="#70cd88" />
         </button>
-        <ReactTypeformEmbed
+        {/* <ReactTypeformEmbed
           popup
           autoOpen={false}
           url="https://andrewrobida.typeform.com/to/fJa9Kr"
@@ -41,7 +40,7 @@ export default class Contact extends React.Component {
           ref={tf => {
             this.typeformEmbed = tf
           }}
-        />
+        /> */}
         <div>
           <Tweets twits={this.props.data.allTweet.edges} />
         </div>
