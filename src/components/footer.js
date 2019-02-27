@@ -10,7 +10,6 @@ const footer = css`
   position: fixed;
   bottom: 0;
   width: 100vw;
-  mix-blend-mode: darken;
   @media (max-width: 450px) {
     display: none;
   }
@@ -21,7 +20,7 @@ const footerbox = css`
   margin: 0;
   padding: 10px;
   display: grid;
-  grid-template-columns: 0.2fr 1.3fr 1fr 0.4fr;
+  grid-template-columns: 0.1fr 3fr 1.2fr 0.1fr;
   grid-gap: 2em;
   grid-template-areas: 'free1 rights social free2';
   grid-area: footer;
