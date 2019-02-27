@@ -22,7 +22,7 @@ const list = css`
 `
 const link = css`
   font-weight: 200;
-  font-size: 1.4em;
+  font-size: 1.8em;
   color: #663399;
 `
 const pic = css`
@@ -32,9 +32,10 @@ const pic = css`
   margin-bottom: 30px;
 `
 const footer = css`
-  position: fixed;
   padding: 5px;
   bottom: 10px;
+  margin-top: 80%;
+  text-align: center;
 `
 const ext_link = css`
   color: #ffb237;
