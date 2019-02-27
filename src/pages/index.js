@@ -1,10 +1,10 @@
 import React from 'react'
 import { css } from '@emotion/core'
 import Typing from 'react-typing-animation'
-
+import { SidebarJS, sidebarService } from 'react-sidebarjs'
+import MobileItems from '../components/mobileitems'
 import SEO from '../components/seo'
 import Header from '../components/header'
-import SideNav from '../components/sidenav'
 import Footer from '../components/footer'
 
 const bg = css`
@@ -41,67 +41,91 @@ const text = css`
     padding-top: 20em;
   }
 `
+export default class IndexPage extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isVisibleSidebar: false,
+    }
+    this.toggleSidebar = this.toggleSidebar.bind(this)
+    this.changeSidebarVisibility = this.changeSidebarVisibility.bind(this)
+  }
+  toggleSidebar = () => {
+    sidebarService.toggle('MainSidebar')
+    console.log('working!')
+  }
+  changeSidebarVisibility = changes => {
+    this.setState({
+      isVisibleSidebar: changes.isVisible,
+    })
+  }
 
-const IndexPage = () => (
-  <>
-    <SEO
-      title="Welcome"
-      keywords={[
-        `Andrew Robida`,
-        `arobida`,
-        `portfolio`,
-        `gatsbyjs`,
-        `web developer`,
-        `javascript`,
-      ]}
-    />
+  render() {
+    return (
+      <>
+        <SEO
+          title="Welcome"
+          keywords={[
+            `Andrew Robida`,
+            `arobida`,
+            `portfolio`,
+            `gatsbyjs`,
+            `web developer`,
+            `javascript`,
+          ]}
+        />
 
-    <div className="bg" css={bg}>
-      <Header />
-      <div css={text}>
-        <h1 css={center}>
-          <Typing speed={80}>
-            <span>Modern Web Developer</span>
-          </Typing>
-        </h1>
-        <h2 css={center}>
-          <Typing speed={80}>
-            <Typing.Delay ms={2600} />
-            <span style={{ color: 'white' }}>With: </span>
-            <span>
-              react{' '}
-              <span role="img" aria-label="emoji rock-on">
-                🤘
-              </span>
-            </span>
-            <Typing.Backspace count={8} delay={500} />
-            <span>
-              node{' '}
-              <span role="img" aria-label="emoji nerdy face">
-                🤓
-              </span>
-            </span>
-            <Typing.Backspace count={7} delay={500} />
-            <span>
-              gatsby{' '}
-              <span role="img" aria-label="emoji rocket">
-                🚀
-              </span>
-            </span>
-            <Typing.Backspace count={9} delay={500} />
-            <span>
-              & much more!{' '}
-              <span role="img" aria-label="emoji thumbs up">
-                👍
-              </span>
-            </span>
-          </Typing>
-        </h2>
-      </div>
-    </div>
-    <SideNav />
-    <Footer />
-  </>
-)
-
-export default IndexPage
+        <div className="bg" css={bg}>
+          <Header />
+          <div css={text}>
+            <h1 css={center}>
+              <Typing speed={80}>
+                <span>Modern Web Developer</span>
+              </Typing>
+            </h1>
+            <h2 css={center}>
+              <Typing speed={80}>
+                <Typing.Delay ms={2600} />
+                <span style={{ color: 'white' }}>With: </span>
+                <span>
+                  react{' '}
+                  <span role="img" aria-label="emoji rock-on">
+                    🤘
+                  </span>
+                </span>
+                <Typing.Backspace count={8} delay={500} />
+                <span>
+                  node{' '}
+                  <span role="img" aria-label="emoji nerdy face">
+                    🤓
+                  </span>
+                </span>
+                <Typing.Backspace count={7} delay={500} />
+                <span>
+                  gatsby{' '}
+                  <span role="img" aria-label="emoji rocket">
+                    🚀
+                  </span>
+                </span>
+                <Typing.Backspace count={9} delay={500} />
+                <span>
+                  & much more!{' '}
+                  <span role="img" aria-label="emoji thumbs up">
+                    👍
+                  </span>
+                </span>
+              </Typing>
+            </h2>
+          </div>
+        </div>
+        <SidebarJS
+          sidebarjsName="MainSidebar"
+          onChangeVisibility={this.changeSidebarVisibility}
+        >
+          <MobileItems />
+        </SidebarJS>
+        <Footer />
+      </>
+    )
+  }
+}
