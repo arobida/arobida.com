@@ -39,6 +39,11 @@ const container = css`
   padding-top: 0;
   font-size: 1.2em;
 `
+const mobile = css`
+  @media (min-width: 450px) {
+    display: none;
+  }
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -55,11 +60,9 @@ const Layout = ({ children }) => (
       <>
         <img src={left} alt="left triangle" css={leftAngle} />
         <Header />
-        <div css={container}>
-          {children}
-        </div>
+        <div css={container}>{children}</div>
         <Footer />
-        <MobileMenu />
+        <MobileMenu css={mobile} />
         <img src={right} alt="right triangle" css={rightAngle} />
       </>
     )}
