@@ -4,7 +4,6 @@ import { css } from '@emotion/core'
 import Sidebar from 'react-sidebar'
 
 const mobile = css`
-z-index:100;
   @media (min-width: 450px) {
     display: none;
   }
@@ -105,12 +104,9 @@ export default class MobileMenu extends React.Component {
         onSetOpen={this.onSetSidebarOpen}
         pullRight
         touch
-        touchHandleWidth={30}
-        styles={{ sidebar: { background: 'white', position:'fixed' } }}
-        css={mobile}
+        styles={{ sidebar: { background: 'white', position: 'fixed' } }}
       >
-        <div onClick={() => this.onSetSidebarOpen(true)} css={burger}>
-        </div>
+        <div onClick={() => this.onSetSidebarOpen(true)} css={burger} >X</div>
       </Sidebar>
     )
   }

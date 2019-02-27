@@ -26,6 +26,7 @@ export default class Contact extends React.Component {
       <Layout>
         <SEO title="Contact" />
         <h1>Contact Me</h1>
+        <p>If you would like to contact me you can do so on social media or use the contact form below...</p>
         <button css={button}>
           <FaEnvelope size="2em" color="#70cd88" />
         </button>
