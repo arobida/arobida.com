@@ -17,7 +17,7 @@ const burger = css`
 const list = css`
 margin-top:50px;
   list-style: none;
-  margin:;
+  margin-left:30%;
 `
 const link = css`
   font-weight: 200;
