@@ -9,12 +9,7 @@ export default class SideNav extends React.Component {
     this.state = {
       isVisibleSidebar: false,
     }
-    this.toggleSidebar = this.toggleSidebar.bind(this)
     this.changeSidebarVisibility = this.changeSidebarVisibility.bind(this)
-  }
-  toggleSidebar = () => {
-    sidebarService.toggle('MainSidebar')
-    console.log('working!')
   }
 
   changeSidebarVisibility = changes => {

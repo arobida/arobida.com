@@ -1,7 +1,8 @@
 import React from 'react'
 import { css } from '@emotion/core'
 import Typing from 'react-typing-animation'
-
+import { SidebarJS, sidebarService } from 'react-sidebarjs'
+import { FaCode } from 'react-icons/fa'
 import SEO from '../components/seo'
 import Header from '../components/header'
 import SideNav from '../components/sidenav'
@@ -41,6 +42,24 @@ const text = css`
     padding-top: 20em;
   }
 `
+const burger = css`
+@media(min-width:450px){
+  display:none
+}
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  bottom: 20px;
+  right: 25px;
+  transition: 1s;
+  :hover {
+    -webkit-transform: scale(1.5) rotate(360deg);
+    transform: scale(1.5) rotate(360deg);
+  }
+`
+const toggleSidebar = () => {
+  sidebarService.toggle('MainSidebar')
+}
 
 const IndexPage = () => (
   <>
@@ -100,6 +119,9 @@ const IndexPage = () => (
       </div>
     </div>
     <SideNav />
+    <div css={burger} onClick={toggleSidebar}>
+      <FaCode color="#663399" size="3em" />
+    </div>
     <Footer />
   </>
 )

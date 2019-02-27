@@ -7,13 +7,6 @@ import Ext_link from './ext_link'
 import Profile from './profile'
 import Icon from './icon'
 
-const burger = css`
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  bottom: 20px;
-  right: 25px;
-`
 const list = css`
   margin-top: 30px;
   list-style: none;
