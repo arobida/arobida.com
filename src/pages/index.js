@@ -99,7 +99,6 @@ const IndexPage = () => (
         </h2>
       </div>
     </div>
-    <MobileMenu />
     <Footer />
   </>
 )

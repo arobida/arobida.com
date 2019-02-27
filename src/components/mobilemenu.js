@@ -33,9 +33,9 @@ const pic = css`
 `
 const footer = css`
   padding: 5px;
-  position:fixed;
+  position: fixed;
   bottom: 10px;
-  margin-left:2em;
+  margin-left: 2em;
 `
 const ext_link = css`
   color: #ffb237;
@@ -153,10 +153,10 @@ export default class MobileMenu extends React.Component {
         onSetOpen={this.onSetSidebarOpen}
         pullRight
         styles={{
-          root: { overflow: 'auto' },
+          root: { position: 'relative' },
           sidebar: { background: 'white', width: '20em' },
-          content: { position: 'fixed' },
-          overlay: { position: 'fixed' },
+          content: {},
+          overlay: {},
         }}
       >
         <button onClick={() => this.onSetSidebarOpen(true)} css={burger}>
