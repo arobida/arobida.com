@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import { css } from '@emotion/core'
-import { SidebarJS, sidebarService } from 'react-sidebarjs'
-import MobileItems from './mobileitems'
+
 import Header from './header'
+import SideNav from './sidenav'
 import Footer from './footer'
 import left from '../images/left-angle.svg'
 import right from '../images/right-angle.svg'
@@ -38,57 +38,33 @@ const container = css`
   padding-top: 0;
   font-size: 1.2em;
 `
-export default class Layout extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      isVisibleSidebar: false,
-    }
-    this.toggleSidebar = this.toggleSidebar.bind(this)
-    this.changeSidebarVisibility = this.changeSidebarVisibility.bind(this)
-  }
-  toggleSidebar = () => {
-    sidebarService.toggle('MainSidebar')
-    console.log('working!')
-  }
 
-  changeSidebarVisibility = changes => {
-    this.setState({
-      isVisibleSidebar: changes.isVisible,
-    })
-  }
-  render() {
-    return (
-      <StaticQuery
-        query={graphql`
-          query SiteTitleQuery {
-            site {
-              siteMetadata {
-                title
-              }
-            }
+const Layout = ({ children }) => (
+  <StaticQuery
+    query={graphql`
+      query SiteTitleQuery {
+        site {
+          siteMetadata {
+            title
           }
-        `}
-        render={data => (
-          <>
-            <img src={left} alt="left triangle" css={leftAngle} />
-            <Header />
-            <div css={container}>{this.props.children}</div>
-            <SidebarJS
-              sidebarjsName="MainSidebar"
-              onChangeVisibility={this.changeSidebarVisibility}
-            >
-              <MobileItems />
-            </SidebarJS>
-            <Footer />
-            <img src={right} alt="right triangle" css={rightAngle} />
-          </>
-        )}
-      />
-    )
-  }
-}
+        }
+      }
+    `}
+    render={data => (
+      <>
+        <img src={left} alt="left triangle" css={leftAngle} />
+        <Header />
+        <div css={container}>{children}</div>
+        <SideNav/>
+        <Footer />
+        <img src={right} alt="right triangle" css={rightAngle} />
+      </>
+    )}
+  />
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
+
+export default Layout
