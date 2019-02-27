@@ -6,6 +6,7 @@ import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa'
 
 import Profile from '../components/profile'
 import Ext_link from '../components/ext_link'
+import Icon from '../components/icon'
 
 const burger = css`
   position: fixed;
@@ -15,9 +16,9 @@ const burger = css`
   right: 25px;
 `
 const list = css`
-margin-top:50px;
+  margin-top: 80px;
   list-style: none;
-  margin-left:30%;
+  margin-left: 35%;
 `
 const link = css`
   font-weight: 200;
@@ -27,7 +28,16 @@ const link = css`
 const pic = css`
   width: 10em;
   margin: 0 auto;
-  margin-bottom:30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+`
+const footer = css`
+  position: fixed;
+  padding: 5px;
+  bottom: 10px;
+`
+const ext_link = css`
+  color: #ffb237;
 `
 const icon_link = css`
   display: inline-block;
@@ -55,7 +65,7 @@ export default class MobileMenu extends React.Component {
             <div css={pic}>
               <Profile />
             </div>
-            <div style={{textAlign:'center'}}>
+            <div style={{ textAlign: 'center' }}>
               <Ext_link href="https://github.com/arobida" styles={icon_link}>
                 <FaGithub size="1.5em" color="#FFB237" />
               </Ext_link>
@@ -68,6 +78,9 @@ export default class MobileMenu extends React.Component {
               >
                 <FaLinkedin size="1.5em" color="#FFB237" />
               </Ext_link>
+            </div>
+            <div css={pic}>
+              <Icon />
             </div>
             <ul css={list}>
               <li>
@@ -123,6 +136,16 @@ export default class MobileMenu extends React.Component {
                 </Link>
               </li>
             </ul>
+            <div css={footer}>
+              © {new Date().getFullYear()}, Built with
+              {` `}
+              <Ext_link href="https://www.gatsbyjs.org" styles={ext_link}>
+                Gastby{' '}
+                <span role="img" aria-label="emoji heart">
+                  💜
+                </span>
+              </Ext_link>
+            </div>
           </b>
         }
         open={this.state.sidebarOpen}
