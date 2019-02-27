@@ -16,7 +16,7 @@ const burger = css`
   right: 25px;
 `
 const list = css`
-  margin-top: 80px;
+  margin-top: 30px;
   list-style: none;
   margin-left: 35%;
 `
