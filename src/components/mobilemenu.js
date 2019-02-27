@@ -33,9 +33,9 @@ const pic = css`
 `
 const footer = css`
   padding: 5px;
+  position:fixed;
   bottom: 10px;
-  margin-top: 80%;
-  text-align: center;
+  margin-left:2em;
 `
 const ext_link = css`
   color: #ffb237;
