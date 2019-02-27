@@ -4,7 +4,7 @@ import Typing from 'react-typing-animation'
 
 import SEO from '../components/seo'
 import Header from '../components/header'
-import MobileMenu from '../components/mobilemenu'
+import SideNav from '../components/sidenav'
 import Footer from '../components/footer'
 
 const bg = css`
@@ -36,7 +36,7 @@ const center = css`
 `
 const text = css`
   margin: 0 auto;
-  padding-top:8em;
+  padding-top: 8em;
   @media (max-width: 450px) {
     padding-top: 20em;
   }
@@ -67,7 +67,7 @@ const IndexPage = () => (
         <h2 css={center}>
           <Typing speed={80}>
             <Typing.Delay ms={2600} />
-            <span style={{color:'white'}}>With: </span>
+            <span style={{ color: 'white' }}>With: </span>
             <span>
               react{' '}
               <span role="img" aria-label="emoji rock-on">
@@ -99,6 +99,7 @@ const IndexPage = () => (
         </h2>
       </div>
     </div>
+    <SideNav />
     <Footer />
   </>
 )

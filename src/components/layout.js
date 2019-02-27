@@ -3,9 +3,7 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import { css } from '@emotion/core'
 
-import './layout.css'
 import Header from './header'
-import MobileMenu from './mobilemenu'
 import SideNav from './sidenav'
 import Footer from './footer'
 import left from '../images/left-angle.svg'
@@ -39,11 +37,6 @@ const container = css`
   padding: 0px 1.0875rem 3.45rem;
   padding-top: 0;
   font-size: 1.2em;
-`
-const mobile = css`
-  @media (min-width: 450px) {
-    display: none;
-  }
 `
 
 const Layout = ({ children }) => (

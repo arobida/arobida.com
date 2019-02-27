@@ -1,9 +1,19 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { css } from '@emotion/core'
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 import Ext_link from './ext_link'
+import Profile from './profile'
+import Icon from './icon'
 
+const burger = css`
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  bottom: 20px;
+  right: 25px;
+`
 const list = css`
   margin-top: 30px;
   list-style: none;
@@ -122,3 +132,5 @@ const MobileItems = () => (
     </div>
   </div>
 )
+
+export default MobileItems
