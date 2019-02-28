@@ -44,7 +44,7 @@ module.exports = {
         resolve: `gatsby-source-twitter`,
         options: {
             q: `theafr86`,
-            count:`5`,
+            count:`100`,
             result_type: `mixed`,
             credentials: {
                 consumer_key: `${process.env.TWITTER_CKEY}`,
