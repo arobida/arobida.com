@@ -36,7 +36,7 @@ const About = ({ props }) => (
       <Ext_link href="https://www.linkedin.com/in/andrew-robida/" styles={icon_link}><FaLinkedin size="1.5em" color="#FFB237" /></Ext_link>
       </div>
     </div>
-    <div>
+    <div style={{marginTop:'2em'}}>
       <h2>Hi Im Andrew & I am addicted to development</h2>
       <p>
       Ever since I was young I have loved figuring things out, how they work, how it was made, and can it be better. These things have constantly driven me to learn and improve all my life Im that annoying guy in your class that always ask why. Building things, solving problems, and process improvment is my cup of tea so if thats your cup too or you would like something special built give me a holler. Thanks for reading and I hope we will talk soon!
