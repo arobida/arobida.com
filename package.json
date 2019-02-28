@@ -23,6 +23,7 @@
     "gatsby-source-filesystem": "^2.0.8",
     "gatsby-source-graphql": "^2.0.10",
     "gatsby-source-twitter": "^2.0.0",
+    "gatsby-transformer-remark": "^2.3.0",
     "gatsby-transformer-sharp": "^2.1.13",
     "graphql": "^14.1.1",
     "node-fetch": "^2.3.0",
