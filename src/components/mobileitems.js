@@ -26,8 +26,12 @@ const pic = css`
 const footer = css`
   padding: 5px;
   position: fixed;
-  bottom: 10px;
-  margin-left: 2em;
+  bottom: 0;
+  padding-left: 3em;
+  background:#663399;
+  color:white;
+  width:100%;
+  height:3em;
 `
 const ext_link = css`
   color: #ffb237;
@@ -44,16 +48,16 @@ const MobileItems = () => (
     </div>
     <div style={{ textAlign: 'center' }}>
       <Ext_link href="https://github.com/arobida" styles={icon_link}>
-        <FaGithub size="1.5em" color="#FFB237" />
+        <FaGithub size="2.5em" color="#FFB237" />
       </Ext_link>
       <Ext_link href="https://twitter.com/theafr86" styles={icon_link}>
-        <FaTwitter size="1.5em" color="#FFB237" />
+        <FaTwitter size="2.5em" color="#FFB237" />
       </Ext_link>
       <Ext_link
         href="https://www.linkedin.com/in/andrew-robida/"
         styles={icon_link}
       >
-        <FaLinkedin size="1.5em" color="#FFB237" />
+        <FaLinkedin size="2.5em" color="#FFB237" />
       </Ext_link>
     </div>
     <div css={pic}>
