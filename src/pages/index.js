@@ -47,10 +47,12 @@ const burger = css`
   display:none
 }
   position: fixed;
-  width: 36px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   bottom: 20px;
   right: 25px;
+  background:#663399;
+  border-radius:100%;
   transition: 1s;
   :hover {
     -webkit-transform: scale(1.5) rotate(360deg);
@@ -120,7 +122,7 @@ const IndexPage = () => (
     </div>
     <SideNav />
     <div css={burger} onClick={toggleSidebar}>
-      <FaCode color="#663399" size="3em" />
+      <FaCode color="#ffb237" size="3em" />
     </div>
     <Footer />
   </>

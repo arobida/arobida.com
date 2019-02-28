@@ -44,10 +44,12 @@ const burger = css`
     display: none;
   }
   position: fixed;
-  width: 36px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   bottom: 20px;
   right: 25px;
+  background:white;
+  border-radius:100%;
   transition: 1s;
   :hover {
     -webkit-transform: scale(1.5) rotate(360deg);
