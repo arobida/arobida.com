@@ -7,15 +7,12 @@ import Ext_link from '../components/ext_link'
 const container = css`
   background: #131921;
   color: white;
-  padding: 5px;
   border-radius: 0.4em;
   height: 20em;
   overflow: auto;
   float: left;
   position: relative;
-  padding-top:0;
-  padding-left:1em;
-  padding-right:2em;
+  padding:1em;
 `
 const tweet = css`
   font-style: italic;
@@ -29,14 +26,16 @@ const source_link = css`
 `
 const Tweets = ({ twits }) => {
   return (
-    <div css={container}>
-      <h2 style={{ background: '#131921', width:'86%', color: 'white', position: 'fixed' }}>
-        <FaTwitter /> Follow Me On Twitter
+    <>
+    <h2 style={{ marginTop:'1em' }}>
+        <FaTwitter color="#1CA1F2" size="1.2em"/>
+        Follow Me On Twitter
+        <FaTwitter color="#1CA1F2" size="1.2em"/>
       </h2>
-      <br/><br/>
+    <div css={container}>
       {twits.map((x, i) => {
         // let tweet = x.node
-        const { created_at, entities, full_text, place, user } = x.node
+        const { created_at, entities, full_text, id_str, place, user } = x.node
         const url = () =>
           entities.urls.length === 1 ? (
             <Ext_link href={entities.urls[0].url} styles={source_link}>
@@ -50,7 +49,7 @@ const Tweets = ({ twits }) => {
         return (
           <div key={i} css={tweet}>
             <Ext_link
-              href={`https://twitter.com/${user.screen_name}`}
+              href={`https://twitter.com/${user.screen_name}/status/${id_str}`}
               styles={user_link}
             >
               @{user.screen_name}
@@ -65,6 +64,7 @@ const Tweets = ({ twits }) => {
         )
       })}
     </div>
+    </>
   )
 }
 

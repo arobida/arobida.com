@@ -10,7 +10,7 @@ import Tweets from '../components/tweets'
 const button = css`
   background: #131921;
   border-radius: 0.4em;
-  width:4em;
+  width: 4em;
 `
 
 export default class Contact extends React.Component {
@@ -24,18 +24,19 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Contact"
-          keywords={[
-        `andrew`,
-         `robida`,
-        `arobida`,
-        `contact`
-      ]}
+        <SEO
+          title="Contact"
+          keywords={[`andrew`, `robida`, `arobida`, `contact`]}
         />
         <h1>Contact Me</h1>
-        <p>If you would like to contact me you can do so on social media or use the contact form below...</p>
+        <p>
+          If you would like to contact me you can do so on social media or use
+          the contact form below...
+        </p>
         <button css={button}>
-          <FaEnvelope size="2em" color="#70cd88" />
+          <a href="mailto:afrobida@gmail.com">
+            <FaEnvelope size="2em" color="#70cd88" />
+          </a>
         </button>
         {/* <ReactTypeformEmbed
           popup
@@ -67,6 +68,7 @@ export const query = graphql`
           }
           created_at
           full_text
+          id_str
           entities {
             urls {
               display_url
