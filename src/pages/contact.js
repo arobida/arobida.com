@@ -24,7 +24,14 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Contact" />
+        <SEO title="Contact"
+          keywords={[
+        `andrew`,
+         `robida`,
+        `arobida`,
+        `contact`
+      ]}
+        />
         <h1>Contact Me</h1>
         <p>If you would like to contact me you can do so on social media or use the contact form below...</p>
         <button css={button}>

@@ -22,7 +22,15 @@ margin-right:15px;
 `
 const About = ({ props }) => (
   <Layout>
-    <SEO title="About" />
+    <SEO title="About"
+      keywords={[
+        `andrew`,
+        `robida`,
+        `arobida`,
+        `bio`,
+        `developer`
+      ]}
+    />
     <h1>About Me</h1>
     <div css={grid}>
     <div css={pic}>

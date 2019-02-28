@@ -8,7 +8,16 @@ import Repos from '../components/repos'
 
 const Projects = ({ data }) => (
   <Layout>
-    <SEO title="Projects" />
+    <SEO title="Projects"
+       keywords={[
+        `andrew`,
+        `robida`,
+        `arobida`,
+        `projects`,
+        `examples`,
+        `websites`
+      ]}
+    />
     <h1>Current Projects</h1>
     <p>
 Here is a current list of projects that I am working on...

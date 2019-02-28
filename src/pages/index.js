@@ -68,12 +68,16 @@ const IndexPage = () => (
     <SEO
       title="Welcome"
       keywords={[
-        `Andrew Robida`,
+        `andrew`,
+        `robida`,
         `arobida`,
         `portfolio`,
         `gatsbyjs`,
-        `web developer`,
-        `javascript`,
+        `reactjs`,
+        `graphql`,
+        `website`,
+        `jamstack`,
+        `javascript`
       ]}
     />
 
