@@ -1,6 +1,6 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env`,
-});
+})
 const fs = require(`fs`)
 const fetch = require(`node-fetch`)
 const { buildClientSchema } = require(`graphql`)
@@ -41,18 +41,25 @@ module.exports = {
       },
     },
     {
-        resolve: `gatsby-source-twitter`,
-        options: {
-            q: `theafr86`,
-            count:`100`,
-            result_type: `mixed`,
-            credentials: {
-                consumer_key: `${process.env.TWITTER_CKEY}`,
-                consumer_secret: `${process.env.TWITTER_CSECRET}`,
-                bearer_token: `${process.env.TWITTER_TOKEN}`
-            },
-            tweet_mode: 'extended'
-        }
+      resolve: `gatsby-source-medium`,
+      options: {
+        username: `@arobida`,
+        limit: 100,
+      },
+    },
+    {
+      resolve: `gatsby-source-twitter`,
+      options: {
+        q: `theafr86`,
+        count: `100`,
+        result_type: `mixed`,
+        credentials: {
+          consumer_key: `${process.env.TWITTER_CKEY}`,
+          consumer_secret: `${process.env.TWITTER_CSECRET}`,
+          bearer_token: `${process.env.TWITTER_TOKEN}`,
+        },
+        tweet_mode: 'extended',
+      },
     },
     {
       resolve: `gatsby-plugin-typography`,
@@ -72,7 +79,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },

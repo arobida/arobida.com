@@ -30,6 +30,7 @@ const About = ({ props }) => (
         `bio`,
         `developer`
       ]}
+      description="This is the about page that contains a little bio."
     />
     <h1>About Me</h1>
     <div css={grid}>
