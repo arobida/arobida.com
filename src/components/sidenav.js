@@ -1,6 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/core'
-import { SidebarJS, sidebarService } from 'react-sidebarjs'
+import { SidebarJS } from 'react-sidebarjs'
 import MobileItems from './mobileitems'
 
 export default class SideNav extends React.Component {
@@ -22,7 +22,7 @@ export default class SideNav extends React.Component {
     return (
       <SidebarJS
         sidebarjsName="MainSidebar"
-        sidebarjsConfig={{ position: 'right', responsive:'true' }}
+        sidebarjsConfig={{ position: 'right', responsive: 'true' }}
         onChangeVisibility={this.changeSidebarVisibility}
       >
         <MobileItems />

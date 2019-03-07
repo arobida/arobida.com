@@ -54,13 +54,14 @@ const burger = css`
   border-radius: 100%;
   box-shadow: 3px 3px #666666;
   :active {
-    background-color: #663399;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
 `
 const toggleSidebar = () => {
-  sidebarService.toggle('MainSidebar')
+  setTimeout(() => {
+    sidebarService.toggle('MainSidebar')
+  }, 400)
 }
 
 const Layout = ({ children, props }) => (

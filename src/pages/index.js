@@ -61,7 +61,9 @@ const burger = css`
   }
 `
 const toggleSidebar = () => {
-  sidebarService.toggle('MainSidebar')
+  setTimeout(() => {
+    sidebarService.toggle('MainSidebar')
+  }, 400)
 }
 
 const IndexPage = () => (
