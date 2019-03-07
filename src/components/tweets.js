@@ -47,7 +47,7 @@ const Tweets = ({ twits }) => {
         const city = () => (place ? place.name : '')
         console.log(entities.urls)
         return (
-          <div key={i} css={tweet} className="hatch">
+          <div key={i} css={tweet}>
             <Ext_link
               href={`https://twitter.com/${user.screen_name}/status/${id_str}`}
               styles={user_link}
