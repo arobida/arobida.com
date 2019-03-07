@@ -41,13 +41,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-medium`,
-      options: {
-        username: `@arobida`,
-        limit: 100,
-      },
-    },
-    {
       resolve: `gatsby-source-twitter`,
       options: {
         q: `theafr86`,

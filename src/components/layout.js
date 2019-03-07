@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import './animation.css'
 import { css } from '@emotion/core'
 import { sidebarService } from 'react-sidebarjs'
 import { FaCode } from 'react-icons/fa'
@@ -34,7 +35,7 @@ const rightAngle = css`
 `
 const container = css`
   margin: 0 auto;
-  margin-top:2em;
+  margin-top: 2em;
   max-width: 960px;
   padding: 0px 1.0875rem 3.45rem;
   padding-top: 0;
@@ -49,12 +50,13 @@ const burger = css`
   height: 40px;
   bottom: 20px;
   right: 25px;
-  background:white;
-  border-radius:100%;
-  transition: 1s;
-  :hover {
-    -webkit-transform: scale(1.5) rotate(360deg);
-    transform: scale(1.5) rotate(360deg);
+  background: white;
+  border-radius: 100%;
+  box-shadow: 3px 3px #666666;
+  :active {
+    background-color: #663399;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
   }
 `
 const toggleSidebar = () => {
@@ -78,7 +80,7 @@ const Layout = ({ children, props }) => (
         <Header />
         <div css={container}>{children}</div>
         <SideNav />
-        <div css={burger} onClick={toggleSidebar}>
+        <div css={burger} onClick={toggleSidebar} className="hatch">
           <FaCode color="#ffb237" size="3em" />
         </div>
         <Footer />

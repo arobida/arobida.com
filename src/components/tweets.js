@@ -32,7 +32,7 @@ const Tweets = ({ twits }) => {
         Follow Me On Twitter
         <FaTwitter color="#1CA1F2" size="1.2em"/>
       </h2>
-    <div css={container}>
+    <div css={container} >
       {twits.map((x, i) => {
         // let tweet = x.node
         const { created_at, entities, full_text, id_str, place, user } = x.node
@@ -47,7 +47,7 @@ const Tweets = ({ twits }) => {
         const city = () => (place ? place.name : '')
         console.log(entities.urls)
         return (
-          <div key={i} css={tweet}>
+          <div key={i} css={tweet} className="hatch">
             <Ext_link
               href={`https://twitter.com/${user.screen_name}/status/${id_str}`}
               styles={user_link}

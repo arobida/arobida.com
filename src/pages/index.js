@@ -43,20 +43,21 @@ const text = css`
   }
 `
 const burger = css`
-@media(min-width:450px){
-  display:none
-}
+  @media (min-width: 450px) {
+    display: none;
+  }
   position: fixed;
   width: 40px;
   height: 40px;
   bottom: 20px;
   right: 25px;
-  background:#663399;
-  border-radius:100%;
-  transition: 1s;
-  :hover {
-    -webkit-transform: scale(1.5) rotate(360deg);
-    transform: scale(1.5) rotate(360deg);
+  background: #663399;
+  border-radius: 100%;
+  box-shadow: 3px 3px #666666;
+  :active {
+    background-color: #663399;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
   }
 `
 const toggleSidebar = () => {
@@ -77,7 +78,7 @@ const IndexPage = () => (
         `graphql`,
         `website`,
         `jamstack`,
-        `javascript`
+        `javascript`,
       ]}
     />
 
@@ -125,7 +126,7 @@ const IndexPage = () => (
       </div>
     </div>
     <SideNav />
-    <div css={burger} onClick={toggleSidebar}>
+    <div css={burger} onClick={toggleSidebar} className="hatch">
       <FaCode color="#ffb237" size="3em" />
     </div>
     <Footer />
