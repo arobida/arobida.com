@@ -8,20 +8,27 @@ import Repos from '../components/repos'
 
 const Projects = ({ data }) => (
   <Layout>
-    <SEO title="Projects"
-       keywords={[
+    <SEO
+      title="Projects"
+      keywords={[
         `andrew`,
         `robida`,
         `arobida`,
+        `andrew robida`,
+        `portfolio`,
+        `gatsbyjs developer`,
+        `reactjs developer`,
+        `graphql developer`,
+        `website developer`,
+        `jamstack developer`,
+        `javascript developer`,
         `projects`,
         `examples`,
-        `websites`
+        `websites`,
       ]}
     />
     <h1>Current Projects</h1>
-    <p>
-Here is a current list of projects that I am working on...
-    </p>
+    <p>Here is a current list of projects that I am working on...</p>
     <Repos repositories={data.github.viewer.repositories} />
   </Layout>
 )

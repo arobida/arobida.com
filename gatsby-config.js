@@ -68,7 +68,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `arobida.com`,
-        short_name: `my-site`,
+        short_name: `portfolio`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

@@ -74,13 +74,14 @@ const IndexPage = () => (
         `andrew`,
         `robida`,
         `arobida`,
+        `andrew robida`,
         `portfolio`,
-        `gatsbyjs`,
-        `reactjs`,
-        `graphql`,
-        `website`,
-        `jamstack`,
-        `javascript`,
+        `gatsbyjs developer`,
+        `reactjs developer`,
+        `graphql developer`,
+        `website developer`,
+        `jamstack developer`,
+        `javascript developer`
       ]}
     />
 

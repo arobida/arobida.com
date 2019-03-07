@@ -26,7 +26,20 @@ export default class Contact extends React.Component {
       <Layout>
         <SEO
           title="Contact"
-          keywords={[`andrew`, `robida`, `arobida`, `contact`]}
+          keywords={[
+            `andrew`,
+            `robida`,
+            `arobida`,
+            `andrew robida`,
+            `portfolio`,
+            `gatsbyjs developer`,
+            `reactjs developer`,
+            `graphql developer`,
+            `website developer`,
+            `jamstack developer`,
+            `javascript developer`,
+            `contact`,
+          ]}
         />
         <h1>Contact Me</h1>
         <p>
