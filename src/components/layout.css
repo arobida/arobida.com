@@ -8,6 +8,8 @@
 	src: url("../../src/utils/AirbnbCereal-Bold.ttf");
   }
 
-  html,body,div{
+  html,body,div,h1,h2,h3,p{
 	  font-family: Air;
+	  margin:0;
+	  padding:0;
   }
