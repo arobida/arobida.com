@@ -1,8 +1,7 @@
 import Typography from 'typography'
-import Lawton from 'typography-theme-lawton'
-import Air from './AirbnbCereal-Bold.ttf'
-import Ops from './OperatorSSm-Medium-Pro.otf'
+import noriegaTheme from 'typography-theme-noriega'
 
-const typography = new Typography(Lawton)
+
+const typography = new Typography(noriegaTheme)
 
 export default typography
