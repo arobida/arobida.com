@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import './animation.css'
-import './layout.css'
 import { css } from '@emotion/core'
 import { sidebarService } from 'react-sidebarjs'
 import { FaCode } from 'react-icons/fa'
@@ -11,7 +10,11 @@ import SideNav from './sidenav'
 import Footer from './footer'
 import left from '../images/left-angle.svg'
 import right from '../images/right-angle.svg'
+import Air from '../utils/AirbnbCereal-Bold.ttf'
 
+const everything = css`
+  font-family: OperatorSSm-Medium-Pro;
+`
 const leftAngle = css`
   z-index: -50;
   position: fixed;
@@ -41,6 +44,7 @@ const container = css`
   padding: 0px 1.0875rem 3.45rem;
   padding-top: 0;
   font-size: 1.2em;
+  font-family: Air;
 `
 const burger = css`
   @media (min-width: 450px) {
