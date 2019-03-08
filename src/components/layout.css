@@ -1,0 +1,13 @@
+
+@font-face {
+	font-family: Ops;
+	src: url("../../src/utils/OperatorSSm-Medium-Pro.otf");
+  }
+  @font-face {
+	font-family: Air;
+	src: url("../../src/utils/AirbnbCereal-Bold.ttf");
+  }
+
+  html,body,div{
+	  font-family: Air;
+  }
