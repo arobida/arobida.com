@@ -1,7 +1,7 @@
 import Typography from 'typography'
-import noriegaTheme from 'typography-theme-noriega'
+import Lawton from 'typography-theme-lawton'
 
 
-const typography = new Typography(noriegaTheme)
+const typography = new Typography(Lawton)
 
 export default typography
