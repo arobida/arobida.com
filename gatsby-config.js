@@ -11,9 +11,11 @@ module.exports = {
     title: `arobida.com`,
     description: `My portfolio site built with gatsby`,
     author: `Andrew Robida`,
+    siteUrl:`https://arobida.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
