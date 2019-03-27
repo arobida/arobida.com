@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/core'
 import Typing from 'react-typing-animation'
-import { SidebarJS, sidebarService } from 'react-sidebarjs'
+import { sidebarService } from 'react-sidebarjs'
 import { FaCode } from 'react-icons/fa'
 import SEO from '../components/seo'
 import Header from '../components/header'
