@@ -92,7 +92,7 @@ const links = css`
   }
 `
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <Headroom css={nav} disableInlineStyles>
     <div css={navbox} className="nav">
       <Link to="/" css={logo} className="logo">

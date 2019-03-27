@@ -9,7 +9,7 @@ import Repos from '../components/repos'
 const Projects = ({ data }) => (
   <Layout>
     <SEO
-      title="Projects"
+      title="Projects 🏗"
       keywords={[
         `andrew`,
         `robida`,

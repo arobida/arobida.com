@@ -47,6 +47,7 @@ const About = ({ props }) => (
       <div>
         <h2>Andrew Robida</h2>
         <p>Self-taught, inspired to learn</p>
+{/* <p>Located in, <strong>San Diego, Ca</strong></p> */}
         <Ext_link href="https://github.com/arobida" styles={icon_link}>
           <FaGithub size="1.5em" color="#FFB237" />
         </Ext_link>
