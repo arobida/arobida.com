@@ -23,7 +23,7 @@ const icon_link = css`
 const About = ({ props }) => (
   <Layout>
     <SEO
-      title="About"
+      title="About 📃"
       keywords={[
         `andrew`,
         `robida`,
