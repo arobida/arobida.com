@@ -69,7 +69,7 @@ const toggleSidebar = () => {
 const IndexPage = () => (
   <>
     <SEO
-      title="Welcome 🏠"
+      title="🏠Welcome"
       keywords={[
         `andrew`,
         `robida`,

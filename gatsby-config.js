@@ -9,7 +9,7 @@ const { createHttpLink } = require(`apollo-link-http`)
 module.exports = {
   siteMetadata: {
     title: `arobida.com`,
-    description: `My portfolio site built with gatsby`,
+    description: `Hi Im Andrew & I am addicted to development! I build fast, reliable, and gorgeous websites using cutting edge technology like reactjs, graphql, and gatsbyjs. Dont believe me? Just read the stats they speak for themselves.`,
     author: `Andrew Robida`,
     siteUrl:`https://arobida.com`,
   },
