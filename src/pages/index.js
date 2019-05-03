@@ -7,23 +7,9 @@ import SEO from '../components/seo'
 import Header from '../components/header'
 import SideNav from '../components/sidenav'
 import Footer from '../components/footer'
+import Floater from '../components/floater'
 
-const bg = css`
-  background: #ffffff; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #ffffff,
-    #00e676,
-    #ffffff
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #ffffff,
-    #00e676,
-    #ffffff
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  height: 80vh;
-`
+const bg = css``
 const center = css`
   display: flex;
   justify-content: center;
@@ -36,10 +22,11 @@ const center = css`
   }
 `
 const text = css`
+  z-index: 50;
   margin: 0 auto;
   padding-top: 8em;
   @media (max-width: 450px) {
-    padding-top: 20em;
+    padding-top: 15em;
   }
 `
 const burger = css`
@@ -81,12 +68,12 @@ const IndexPage = () => (
         `graphql developer`,
         `website developer`,
         `jamstack developer`,
-        `javascript developer`
+        `javascript developer`,
       ]}
     />
-
-    <div className="bg" css={bg}>
+    <div>
       <Header />
+      <Floater/>
       <div css={text}>
         <h1 css={center}>
           <Typing speed={80}>
@@ -96,29 +83,29 @@ const IndexPage = () => (
         <h2 css={center}>
           <Typing speed={80}>
             <Typing.Delay ms={2600} />
-            <span style={{ color: 'white' }}>With: </span>
-            <span>
+            <span>With: </span>
+            <span style={{ color: '#ffb237' }}>
               react{' '}
               <span role="img" aria-label="emoji rock-on">
                 🤘
               </span>
             </span>
             <Typing.Backspace count={8} delay={500} />
-            <span>
+            <span style={{ color: '#ffb237' }}>
               node{' '}
               <span role="img" aria-label="emoji nerdy face">
                 🤓
               </span>
             </span>
             <Typing.Backspace count={7} delay={500} />
-            <span>
+            <span style={{ color: '#ffb237' }}>
               gatsby{' '}
               <span role="img" aria-label="emoji rocket">
                 🚀
               </span>
             </span>
             <Typing.Backspace count={9} delay={500} />
-            <span>
+            <span style={{ color: '#ffb237' }}>
               & much more!{' '}
               <span role="img" aria-label="emoji thumbs up">
                 👍
