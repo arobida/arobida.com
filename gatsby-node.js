@@ -2,47 +2,52 @@
  Implement Gatsby's Node APIs in this file.
  See: https://www.gatsbyjs.org/docs/node-apis/
  **************************************/
- const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const path = require(`path`)
 
-exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
-  if (node.internal.type === `GitHub`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug,
-    })
-  }
-}
-
+// This creates the event pages
 exports.createPages = ({ graphql, actions }) => {
-  // **Note:** The graphql function call returns a Promise
-  // see: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise for more info
+  const { createPage } = actions
   return graphql(`
-    {
-      github {
-        viewer {
-          repositories(
-            privacy: PUBLIC
-            affiliations: OWNER
-            isFork: false
-            first: 100
-          ) {
-            nodes {
-              name
-              url
-              homepageUrl
-              description
-              updatedAt
-              resourcePath
-            }
+  {
+    github {
+      viewer {
+        repositories(
+          privacy: PUBLIC
+          affiliations: OWNER
+          isFork: false
+          first: 100
+        ) {
+          nodes {
+            id
+            name
+            url
+            homepageUrl
+            description
+            updatedAt
+            resourcePath
           }
         }
       }
     }
+  }
   `).then(result => {
-    console.log(JSON.stringify(result, null, 4))
+    console.log(result.data.github.viewer.repositories.nodes)
+    result.data.github.viewer.repositories.nodes.forEach((node ) => {
+      console.log(node.name)
+      createPage({
+        path: "/projects/" + node.name,
+        component: path.resolve(`./src/templates/projectPage.js`),
+        context: {
+          // Data passed to context is available
+          // in page queries as GraphQL variables.
+          slug: node.name,
+          id: node.id,
+          name:node.name,
+          description:node.description,
+          github:node.url,
+          preview:node.homepageUrl
+        },
+      })
+    })
   })
 }
