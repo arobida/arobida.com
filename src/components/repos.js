@@ -24,7 +24,7 @@ const Repos = ({ repositories }) => {
           <Ext_link href={repository.url} styles={ext_link}>
             <FaGithub />
           </Ext_link>
-          {repository.homepageUrl === null ? (
+          {repository.homepageUrl === null || '' ? (
             <span>No Preview</span>
           ) : (
             <Ext_link href={repository.homepageUrl} styles={ext_link}>
