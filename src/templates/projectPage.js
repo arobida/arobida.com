@@ -1,32 +1,34 @@
 import React from 'react'
-import { Link, graphlql } from 'gatsby'
+import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 import { FaGithub } from 'react-icons/fa'
-import Ext_link from '../components/ext_link'
+import {IoIosArrowBack } from 'react-icons/Io'
+import ExtLink from '../components/ext_link'
+
+const win = typeof window !== 'undefined' ? window : null
 
 const ProjectPage = data => {
-  console.log(data)
   const project = data.pageContext
   return (
     <Layout>
       <Seo title={project.name} />
       <h1 style={{ textTransform: 'uppercase' }}>{project.name}</h1>
       <p>{project.description}</p>
-      <Ext_link href={project.github}>
+      <ExtLink href={project.github}>
         <FaGithub />
-      </Ext_link>
+      </ExtLink>
       {project.preview === null || '' ? (
         <span style={{ marginLeft: '15px' }}>No Preview</span>
       ) : (
-        <Ext_link href={project.preview} styles={{ marginLeft: '20px' }}>
+        <ExtLink href={project.preview} styles={{ marginLeft: '20px' }}>
           Preview
-        </Ext_link>
+        </ExtLink>
       )}
-
-      <h3>
-        <Link to="/projects/">Go Back to the projects</Link>
-      </h3>
+      <div onClick={() => win.history.back()} style={{cursor:'pointer', color:'#ffb237',marginLeft:'-1em'}}>
+        <IoIosArrowBack size="2em" style={{transform:"translateY(30%)"}}/>
+        Go Back
+      </div>
     </Layout>
   )
 }
