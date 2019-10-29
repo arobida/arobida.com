@@ -17,7 +17,7 @@ const Repos = ({ repositories }) => {
     <div>
       {repositories.nodes.map((repository, i) => (
         <div key={i} css={project}>
-          <Link to={`/projects/${repository.name}`}><h2>{repository.name}</h2></Link>
+          <Link to={`/projects/${repository.name}`}><h2 style={{textTransform:'uppercase'}}>{repository.name}</h2></Link>
           <p>Last Updated: {repository.updatedAt.slice(0, 10)}</p>
           <span />
           <p>{repository.description}</p>
