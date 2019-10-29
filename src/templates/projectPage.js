@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 import { FaGithub } from 'react-icons/fa'
-import {IoIosArrowBack } from 'react-icons/Io'
+import {IoIosArrowBack } from 'react-icons/io'
 import ExtLink from '../components/ext_link'
 
 const win = typeof window !== 'undefined' ? window : null
