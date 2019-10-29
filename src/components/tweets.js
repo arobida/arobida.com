@@ -13,6 +13,7 @@ const container = css`
   float: left;
   position: relative;
   padding:1em;
+  margin-bottom:5em;
 `
 const tweet = css`
   font-style: italic;
