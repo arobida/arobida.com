@@ -10,6 +10,7 @@ const Projects = ({ data }) => (
   <Layout>
     <SEO
       title="🏗Projects"
+      author
       keywords={[
         `andrew`,
         `robida`,

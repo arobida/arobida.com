@@ -24,6 +24,7 @@ const About = ({ props }) => (
   <Layout>
     <SEO
       title="📃About"
+      author
       keywords={[
         `andrew`,
         `robida`,

@@ -25,6 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
             description
             updatedAt
             resourcePath
+            openGraphImageUrl
           }
         }
       }
@@ -44,6 +45,7 @@ exports.createPages = ({ graphql, actions }) => {
           id: node.id,
           name:node.name,
           description:node.description,
+          image:node.openGraphImageUrl,
           github:node.url,
           preview:node.homepageUrl
         },

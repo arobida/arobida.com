@@ -57,6 +57,7 @@ const IndexPage = () => (
   <>
     <SEO
       title="🏠Welcome"
+      author
       keywords={[
         `andrew`,
         `robida`,

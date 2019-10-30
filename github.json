@@ -3780,6 +3780,18 @@
               "deprecationReason": null
             },
             {
+              "name": "openGraphImageUrl",
+              "description": "The image used to represent this repository in Open Graph data.",
+              "args":[],
+              "type": {
+                "kind": "SCALAR",
+                "name": "URI",
+                "ofType":null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "owner",
               "description": "The User owner of the repository.",
               "args": [],

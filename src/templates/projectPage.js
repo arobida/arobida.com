@@ -12,8 +12,10 @@ const ProjectPage = data => {
   const project = data.pageContext
   return (
     <Layout>
-      <Seo title={project.name} />
+      <Seo title={project.name} author />
+      <div>
       <h1 style={{ textTransform: 'uppercase' }}>{project.name}</h1>
+      <img src={project.image} alt="project picture" style={{width:'80%'}} />
       <p>{project.description}</p>
       <ExtLink href={project.github}>
         <FaGithub />
@@ -28,6 +30,7 @@ const ProjectPage = data => {
       <div onClick={() => win.history.back()} style={{cursor:'pointer', color:'#ffb237',marginLeft:'-1em'}}>
         <IoIosArrowBack size="2em" style={{transform:"translateY(30%)"}}/>
         Go Back
+      </div>
       </div>
     </Layout>
   )

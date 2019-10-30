@@ -64,6 +64,7 @@ const Contact = props => {
     <Layout>
       <SEO
         title="📩Contact"
+        author
         keywords={[
           `andrew`,
           `robida`,
